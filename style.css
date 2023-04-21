@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url("karsten-wurth-algc0FKHeMA-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    text-align: center;
+    font-family:
+}
+
+#appSection {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(220deg, #485696, #d489c2);
+    margin: auto;
+    padding: 3em;
+    border-radius: 15px;
+    opacity: 0.7;
+    text-align: center;
+}
+
+#searchSection {
+    padding: auto;
+}
+
+.weatherIcon {
+    height: 15em;
+}
+
+#hiLow {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 4em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+#imgTempCity {
+    margin: 2em 0;
+}
+
+#lowTemp, #highTemp {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=text] {
+    color:rgb(58, 35, 126);
+    border-color: rgb(58, 35, 126);
+    border-radius: 5px;
+    outline: none;
+}
+
+button {
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 5px;
+    background-color: #485696;
+    background: none;
+}
+#mainTitle {
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+}
