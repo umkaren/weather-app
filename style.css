@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     background: linear-gradient(220deg, #485696, #d489c2);
     margin: auto;
-    padding: 10em;
+    padding: 7em;
     border-radius: 15px;
     border: 1px solid whitesmoke;
     opacity: 0.7;
@@ -73,7 +73,7 @@ button {
     position: fixed;
 } */
 
-footer img {
+/* footer img {
     display: inline-block;
     height: 1em;
 }
@@ -85,4 +85,4 @@ footer img {
     height: 60px;
     line-height: 60px;
     background-color: white;
-}
+} */
