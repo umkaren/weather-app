@@ -7,10 +7,10 @@ const zipCodeInput = document.getElementById('zipBox');
 const zipCodeButton = document.getElementById('zipButton');
 const currentTime = Date.now();
 const today = new Date(currentTime);
-const weatherIcon = document.querySelector(".weatherIcon")
-const lowTempIcon = document.querySelector(".lowIcon")
-const highTempIcon = document.querySelector(".highIcon")
-const inputPrompt = document.querySelector('.PUN')
+const weatherIcon = document.querySelector('.weatherIcon');
+const lowTempIcon = document.querySelector('.lowIcon');
+const highTempIcon = document.querySelector('.highIcon');
+const inputPrompt = document.querySelector('.PUN');
 
 //function to get weather data
 async function weatherData(zipCode) {
@@ -18,6 +18,17 @@ async function weatherData(zipCode) {
     let dataPoints = await response.json();
 
     if (response.ok) {
+        document.querySelector('.city').style.display = 'block';
+        document.querySelector('.date').style.display = 'block';
+        document.querySelector('.condition').style.display = 'block';
+        document.querySelector('.description').style.display = 'block';
+        document.querySelector('.temperature').style.display = 'block';
+        lowTempIcon.style.display = 'block';
+        document.querySelector('.lTemp').style.display = 'block';
+        highTempIcon.style.display = 'block';
+        document.querySelector('.hTemp').style.display = 'block';
+        weatherIcon.style.display = 'block';
+
         document.querySelector('.city').innerHTML = dataPoints.name;
         document.querySelector('.date').innerHTML = today.toDateString();
         document.querySelector('.condition').innerHTML = dataPoints.weather[0].main;
@@ -59,17 +70,17 @@ async function weatherData(zipCode) {
         weatherIcon.src = 'cloudy.svg';
     }
     } else {
-        document.querySelector('.city').innerHTML = '';
-        document.querySelector('.date').innerHTML = '';
-        document.querySelector('.condition').innerHTML = '';
-        document.querySelector('.description').innerHTML = '';
-        document.querySelector('.temperature').innerHTML ='';
-        lowTempIcon.src = '';
-        document.querySelector('.lTemp').innerHTML ='';
-        highTempIcon.src = '';
-        document.querySelector('.hTemp').innerHTML ='';
-        weatherIcon.src = '';
-    inputPrompt.innerHTML = 'Invalid ZIP code. Please try again.';
+        document.querySelector('.city').style.display = "none";
+        document.querySelector('.date').style.display = "none";
+        document.querySelector('.condition').style.display = "none";
+        document.querySelector('.description').style.display = "none";
+        document.querySelector('.temperature').style.display = "none";
+        lowTempIcon.style.display = "none";
+        document.querySelector('.lTemp').style.display = "none";
+        highTempIcon.style.display = "none";
+        document.querySelector('.hTemp').style.display = "none";
+        weatherIcon.style.display = "none";
+        inputPrompt.innerHTML = 'Invalid ZIP code. Please try again.';
     };
 }
 
